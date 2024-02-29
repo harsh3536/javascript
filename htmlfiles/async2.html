@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async2</title>
+</head>
+
+<body>
+    <h1>Hello Buddy</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        const dateTime = function (str) {
+            console.log(str , Date.now());
+        }
+    //    const intervalId = setInterval(dateTime, 1000 , "hii")
+
+    //    clearInterval(intervalId)    
+        
+       document.getElementById("start").addEventListener("click" ,function( ){
+        intervalId = setInterval(dateTime, 1000 , "hii");
+        console.log("Start");
+       });
+       document.getElementById("stop").addEventListener("click" , function(){
+        clearInterval(intervalId);    
+        console.log("Stop");
+       });
+    </script>
+</body>
+
+</html>
